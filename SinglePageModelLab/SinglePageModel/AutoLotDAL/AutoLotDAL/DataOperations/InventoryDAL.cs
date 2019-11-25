@@ -43,7 +43,8 @@ namespace AutoLotDAL.DataOperations
             List<Car> inventory = new List<Car>();
 
             // Prep command object.
-            string sql = "Select * From Inventory";
+            // 
+            string sql = "Select * From Inventory WHERE CarId < 13";
             using (SqlCommand command = new SqlCommand(sql, _sqlConnection))
             {
                 command.CommandType = CommandType.Text;
